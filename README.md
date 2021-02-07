@@ -47,10 +47,8 @@ The following steps must be ran to setup the terraform deployment node, once com
 + aws s3api create-bucket --bucket terraformstatebucket23223232 --region us-east-1 # needs to be unique in AWS
 + edit backend.tf 
     - set the variable bucket as per the bucket created above
-+ aws route53 list-hosted-zones --region us-east-1 # note the HostedZones Name info
 + edit variables.tf
     - set the automation_pub_ip variable to the output from the curl command
-    - set the hosted-zone variable to the output from the route53 command
 + terraform init
 + terraform validate
 + terraform plan    # Expect 19 resources
