@@ -41,7 +41,7 @@ The following steps must be ran to setup the terraform deployment node, once com
     - Build with the automation key-pair (created & downloaded in the first step)
 + Connect to the EC2 instance using the automation private key
 + git clone https://github.com/p-batey/project3.git
-+ cd project2
++ cd project3
 + ssh-keygen -t rsa -f /home/ec2-user/.ssh/id_rsa -q -P "" 
 + curl http://169.254.169.254/latest/meta-data/public-ipv4      # Determine public IP of current instance
 + aws s3api create-bucket --bucket terraformstatebucket23223232 --region us-east-1 # needs to be unique in AWS
