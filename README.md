@@ -52,7 +52,7 @@ The following steps must be ran to setup the terraform deployment node, once com
 + terraform init
 + terraform validate
 + terraform plan    # Expect 19 resources
-+ terraform apply
++ terraform apply   # Takes around 2 minutes to complete the deployment
 
 Once the deployment is complete, you can access the demo site in a browser at [https://web-demo.<aws_public_hosted_zone>], the correct URL will be provided as output from the terraform deployment
 
