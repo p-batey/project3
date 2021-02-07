@@ -40,7 +40,7 @@ The following steps must be ran to setup the terraform deployment node, once com
     - Use the current security-group (rename: automation-sg) allowing only SSH (TPC/22) from the public IP of your current host/connection
     - Build with the automation key-pair (created & downloaded in the first step)
 + Connect to the EC2 instance using the automation private key
-+ git clone https://github.com/p-batey/project2.git
++ git clone https://github.com/p-batey/project3.git
 + cd project2
 + ssh-keygen -t rsa -f /home/ec2-user/.ssh/id_rsa -q -P "" 
 + curl http://169.254.169.254/latest/meta-data/public-ipv4      # Determine public IP of current instance
