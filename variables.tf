@@ -17,8 +17,3 @@ variable "webserver-port" {
   type    = string
   default = "8080"
 }
-
-variable "hosted-zone" {
-  type    = string
-  default = "cmcloudlab502.info."
-}
