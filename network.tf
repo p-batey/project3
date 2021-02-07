@@ -1,7 +1,7 @@
 # Create VPC
 resource "aws_vpc" "web_vpc" {
   provider             = aws.region-web
-  cidr_block           = "10.0.0.0/16"
+  cidr_block           = "10.0.0.0/26"
   enable_dns_support   = true
   enable_dns_hostnames = true
 
@@ -14,7 +14,7 @@ resource "aws_vpc" "web_vpc" {
 resource "aws_subnet" "public_us_east_1a" {
   provider          = aws.region-web
   vpc_id            = aws_vpc.web_vpc.id
-  cidr_block        = "10.0.0.0/24"
+  cidr_block        = "10.0.0.0/28"
   availability_zone = "us-east-1a"
 
   tags = {
@@ -26,7 +26,7 @@ resource "aws_subnet" "public_us_east_1a" {
 resource "aws_subnet" "public_us_east_1b" {
   provider          = aws.region-web
   vpc_id            = aws_vpc.web_vpc.id
-  cidr_block        = "10.0.1.0/24"
+  cidr_block        = "10.0.0.16/28"
   availability_zone = "us-east-1b"
 
   tags = {
